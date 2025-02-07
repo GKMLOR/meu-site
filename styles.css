@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #f5f5f5;
+    --background-color: #ffffff;
+    --text-color: #333;
+    --dark-background-color: #1e1e1e;
+    --dark-text-color: #f5f5f5;
+    --gradient: linear-gradient(45deg, #6c63ff, #ff6f61);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --secondary-color: #2c2c2c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: var(--gradient);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.habilidades-grid, .projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.habilidade, .projeto {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.habilidade:hover, .projeto:hover {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.habilidade i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.projeto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.projeto p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.projeto .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.projeto p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.projeto .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.trajetoria-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.trajetoria-content p {
+    margin-bottom: 20px;
+}
+
+.trajetoria-content .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    align-self: flex-start;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 15px; /* Espaçamento entre o logo e o título */
+}
